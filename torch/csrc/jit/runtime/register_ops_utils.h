@@ -31,10 +31,12 @@
 #include <c10/util/SmallVector.h>
 #include <c10/util/math_compat.h>
 #include <c10/util/string_utils.h>
+#include <iostream>
 
 namespace torch {
 namespace jit {
 inline c10::AliasAnalysisKind aliasAnalysisFromSchema() {
+  std::cout << "call aliasAnalysisFromSchema" << std::endl; 
   return c10::AliasAnalysisKind::FROM_SCHEMA;
 }
 

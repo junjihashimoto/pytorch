@@ -36,6 +36,16 @@
 #include <ATen/core/function_schema.h>
 #endif
 
+#ifdef __EMSCRIPTEN__
+#define FE_INVALID    1
+#define __FE_DENORM   2
+#define FE_DIVBYZERO  4
+#define FE_OVERFLOW   8
+#define FE_UNDERFLOW  16
+#define FE_INEXACT    32
+#endif
+
+
 C10_DECLARE_bool(caffe2_operator_throw_if_fp_exceptions);
 C10_DECLARE_bool(caffe2_operator_throw_if_fp_overflow_exceptions);
 #ifdef __GNU_LIBRARY__

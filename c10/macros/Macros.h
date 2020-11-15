@@ -239,12 +239,12 @@ extern "C" {
     defined(__HIP_ARCH__) || defined(__HIP__)
 __host__ __device__
 #endif // __CUDA_ARCH__
-    void
-    __assert_fail(
-        const char* assertion,
-        const char* file,
-        unsigned int line,
-        const char* function) throw();
+    // void
+    // __assert_fail(
+    //     const char* assertion,
+    //     const char* file,
+    //     unsigned int line,
+    //     const char* function) throw();
 }
 #endif // NDEBUG
 #define CUDA_KERNEL_ASSERT(cond)                                         \
